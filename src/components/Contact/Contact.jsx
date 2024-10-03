@@ -1,11 +1,13 @@
-
+import styles from "./Contact.module.css"
 
 const Contact = ({name, number}) => {
   return (
-    <li>
-      🙍‍♂️{name}
-      📞{number}
-      <button type="button">Delate</button>
+    <li className={styles.item}>
+      <span className={styles.name}>🙍‍♂️{name}</span>
+      <span>📞{number}</span>
+      <button className={styles.btn} type="button">
+        Delate
+      </button>
     </li>
   );
 }
