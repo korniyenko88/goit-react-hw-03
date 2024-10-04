@@ -1,6 +1,6 @@
 .item {
     font-size: x-large;
-  width: 550px;
+  width: 350px;
   height: 80px;
   border: 2px solid black;
   border-radius: 16px;
@@ -9,9 +9,11 @@
   display: flex;
   align-items: center;
 }
-.name {
-    padding-right: 45px;
+.iteminfo {
+  display: flex;
+  flex-direction: column;
 }
+
 .btn {
     padding: 8px;
     border: 2px solid rgb(73, 71, 71);

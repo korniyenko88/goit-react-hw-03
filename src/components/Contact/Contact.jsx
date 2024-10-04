@@ -3,8 +3,10 @@ import styles from "./Contact.module.css"
 const Contact = ({name, number}) => {
   return (
     <li className={styles.item}>
-      <span className={styles.name}>🙍‍♂️{name}</span>
-      <span>📞{number}</span>
+      <div className={styles.iteminfo}>
+        <span className={styles.name}>🙍‍♂️{name}</span>
+        <span>📞{number}</span>
+      </div>
       <button className={styles.btn} type="button">
         Delate
       </button>
