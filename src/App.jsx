@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
-import ContactList from "./components/ContactList/ContactList";
+import ContactList from './components/ContactList/ContactList';
 import SearchBox from './components/SearchBox/SearchBox';
-
-
+import ContactForm from './components/ContactForm/ContactForm';
 
 function App() {
   const [contacts, setContacts] = useState([
@@ -27,7 +26,7 @@ function App() {
     <>
       <div>
         <h1>Phonebook</h1>
-        {/* <ContactForm /> */}
+        <ContactForm />
         <SearchBox
           searchTerm={searchTerm}
           onSearchChange={handleSearchChange}

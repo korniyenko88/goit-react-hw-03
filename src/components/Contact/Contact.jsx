@@ -1,6 +1,6 @@
-import styles from "./Contact.module.css"
+import styles from './Contact.module.css';
 
-const Contact = ({name, number}) => {
+const Contact = ({ name, number }) => {
   return (
     <li className={styles.item}>
       <div className={styles.iteminfo}>
@@ -12,6 +12,6 @@ const Contact = ({name, number}) => {
       </button>
     </li>
   );
-}
+};
 
 export default Contact;
