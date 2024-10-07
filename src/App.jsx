@@ -3,6 +3,7 @@ import './App.css';
 import ContactList from './components/ContactList/ContactList';
 import SearchBox from './components/SearchBox/SearchBox';
 import ContactForm from './components/ContactForm/ContactForm';
+import { nanoid } from 'nanoid';
 
 function App() {
   const [contacts, setContacts] = useState([
@@ -13,6 +14,14 @@ function App() {
   ]);
 
   const [searchTerm, setSearchTerm] = useState('');
+  const onAddContact = (formData) => {
+    const finalContact = {
+      ...formData,
+      id: nanoid()
+    }
+    setContacts((prev) => [...prev, finalContact]);
+  };
+  
 
   const handleSearchChange = event => {
     setSearchTerm(event.target.value);
@@ -26,7 +35,7 @@ function App() {
     <>
       <div>
         <h1>Phonebook</h1>
-        <ContactForm />
+        <ContactForm onAddContact={onAddContact} />
         <SearchBox
           searchTerm={searchTerm}
           onSearchChange={handleSearchChange}
