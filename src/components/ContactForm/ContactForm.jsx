@@ -24,7 +24,7 @@ const ContactForm = ({ onAddContact }) => {
           <span>Number</span>
           <input className={styles.input} name="number" type="text" />
         </label>
-        <button className={styles.addbtn}>Add contact</button>
+        <button type='submit' className={styles.addbtn}>Add contact</button>
       </form>
     </div>
   );

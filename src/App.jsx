@@ -14,14 +14,20 @@ function App() {
   ]);
 
   const [searchTerm, setSearchTerm] = useState('');
-  const onAddContact = (formData) => {
+  const onAddContact = formData => {
     const finalContact = {
       ...formData,
-      id: nanoid()
-    }
-    setContacts((prev) => [...prev, finalContact]);
+      id: nanoid(),
+    };
+    setContacts(prev => [...prev, finalContact]);
   };
-  
+
+  const onDeleteContact = contactId => {
+    const updatedContacts = contacts.filter(
+      contact => contact.id !== contactId
+    );
+    setContacts(updatedContacts);
+  };
 
   const handleSearchChange = event => {
     setSearchTerm(event.target.value);
@@ -40,7 +46,10 @@ function App() {
           searchTerm={searchTerm}
           onSearchChange={handleSearchChange}
         />
-        <ContactList contacts={filteredContacts} />
+        <ContactList
+          contacts={filteredContacts}
+          onDeleteContact={onDeleteContact}
+        />
       </div>
     </>
   );
