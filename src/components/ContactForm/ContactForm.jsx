@@ -1,6 +1,6 @@
 import styles from './ContactForm.module.css';
-import { Formik, Field, Form } from 'formik';
-import { ErrorMessage } from 'formik';
+import { ErrorMessage, Formik, Field, Form } from 'formik';
+
 import * as Yup from 'yup';
 
 const INITIAL_VALUES = {
